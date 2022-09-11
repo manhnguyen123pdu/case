@@ -30,10 +30,36 @@
                 <input placeholder="What are you looking for ?" type="text">
             </div>
             <div class="headertop__right">
-                <i class="fa fa-shopping-cart"></i>
-                <p>$0.00</p>
-                <i class="fa fa-heart"></i>
+                <i onclick="viewcart()" class="fa fa-shopping-cart"></i>
+                <p></p>
+                <div class="wish">
+                <a href="./page2.html"><i class="fa fa-heart"></i></a>
+                <sup class="wishitem">0</sup>
+                </div>
                 <i class="fa fa-user"></i>
+            </div>
+        </div>
+        <div class="shopcart">
+            <div class="shop__top">
+                <i onclick="out()" class="fa fa-times out"></i>
+                <i class="fa fa-suitcase-rolling"></i>
+                <h5>Cart</h5>
+            </div>
+            <hr>
+            <div class="shop__items">
+                
+            </div>
+            <div class="shop__order">
+                <div class="Subtotal">
+                    <p>Subtotal:</p>
+                    <span class="Subtotall"></span>
+                </div>
+                <div class="Total">
+                    <p>Total:</p>
+                    <span class="total">0</span>
+                </div>
+                <button  onclick="order()" class="proceed">Proceed to checkout</button>
+                <button>View cart</button>
             </div>
         </div>
         <nav>
@@ -495,10 +521,68 @@
         </div>
     </footer>
 
+    <section class="order">
+
+        <div class="order__content">
+            <p style="cursor: pointer;" onclick="outoder()"><i class="fa fa-times"></i></p>
+            <div class="order__left">
+                <h4>Billing details</h4>
+                <div class="name">
+                    <div class="fisrtname">
+                        <label for="">First name *</label>
+                        <input id="firstname" type="text">
+                    </div>
+                    <div class="lastname">
+                        <label for="lastname">Last name *</label>
+                        <input id="lastname" type="text">
+                    </div>
+                </div>
+                <label for="company">Company name (optional)
+                </label>
+                <input id="company" type="text">
+                <label for="Country">Country / Region *
+                </label>
+                <input placeholder="United States(US)" id="Country" type="text">
+                <label for="Country">Street address *
+                </label>
+                <input placeholder="House number and street name " id="Country" type="text">
+                <input placeholder="Apartment, suite,unit, etc.(optional)" id="Country" type="text">
+                <h4>Additional information</h4>
+                <label for="">
+                </label>
+                <textarea placeholder="Note about your order, e.g. spacial note for delivery." name="" id=""
+                    rows="10"></textarea>
+            </div>
+            <div class="order__right">
+                <div class="order__content">
+                    <h4>Your order</h4>
+                    <div class="item">
+                        <p>Product</p>
+                        <p>Subtotal</p>
+                    </div>
+                    <hr>
+                    <div class="list__order">
+                      
+                    </div>
+                    <hr>
+                    <div class="item">
+                        <p>Total</p>
+                        <p class="totalOrder">sadf</p>
+                    </div>
+                    <span>Sorry, it seems that there are no available payment methods for your state. Please contact us
+                        if you require assistance or wish to make alternate arrangements.</span>
+                    <p>Your personal data will be used to process your order, support your experience throughout this
+                        website, and for other purposes described in our <a href="">privacy policy</a>.</p>
+                    <button>Place order</button>
+                    <a href="">Return to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="./js/product.js"></script>
-    <script src="./js/js.js"></script>
-    <script src="./js/productitem.js"></script>
-    <script src="./js/wishlist.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/both.js"></script>
+   
 </body>
 
 </html>

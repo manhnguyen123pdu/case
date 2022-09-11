@@ -44,6 +44,153 @@ header {
             i {
                 padding: 0 15px;
             }
+            .wish {
+                position: relative;
+                sup {
+                    position: absolute;
+                    right: -5px;
+                    top: -5px;
+                    font-size: 12px;
+                    background-color: #ffb128;
+                    color: white;
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    line-height: 20px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .shopcart {
+        position: fixed;
+        background-color: rgb(250, 250, 250);
+        top: 0;
+        width: 380px;
+        height: 100vh;
+        right: 0;
+        z-index: 10;
+        font-family: "Sora", sans-serif;
+        transform: translateX(100%);
+        transition: .5s;
+        .shop__top {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+
+            h5 {
+                @include fontext(25px, 700, #0b3954);
+                padding: 0 10px;
+            }
+            .out {
+                position: absolute;
+                left: 15px;
+                color: gray;
+            }
+            .fa-suitcase-rolling {
+                @include fontext(25px, 700, #0b3954);
+            }
+        }
+        .shop__items{
+            height: 55%;
+            overflow-y: scroll;
+        .shop__item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            .shop__image {
+                flex: 1;
+                img {
+                    width: 100px;
+                }
+            }
+            .shop__info {
+                flex: 1;
+                border-right: 1px solid gray;
+                h4 {
+                    @include fontext(16px, 600,  #0b3954);
+                }
+                p{
+                    margin-top: 5px;
+                    @include fontext(14px, 500,  #0b3954);
+                    span{
+                        color: #ffb128;
+                    }
+                }
+            }
+            .shop__price {
+                flex: 0.7;
+                p{
+                    @include fontext(16px, 700,  #ffb128);
+                    padding-left: 10px;
+                }
+            }
+        }
+        .quality{
+            display:  flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            .quality__left{
+                display: flex;
+                border-radius: 5px;
+                overflow: hidden;
+                button{
+                    padding: 12px 15px;
+                    border: none;
+                    background-color: #174b69;
+                    @include fontext(15px, 600, white);
+                }
+            }
+            .quality__right{
+                button{
+                    border: none;
+                    background-color: white;
+                }
+            }
+        }
+    }
+        .shop__order{
+            padding: 20px;
+            width: 340px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            
+            .Subtotal{
+                display: flex;
+                justify-content: space-between;
+                p,span{
+                @include fontext(16px, 500, gray);
+                }
+            }
+            .Total{
+                display: flex;
+                justify-content: space-between;
+                p{
+                @include fontext(16px, 500, gray);
+                }
+                span{
+                @include fontext(22px, 700, #0b3954);
+                }
+            }
+            button{
+                display: block;
+                width: 100%;
+                padding: 15px 0;
+                border-radius: 25px;
+                border: none;
+                margin: 10px;
+                font-size:14px ;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            .proceed{
+                background-color: #ffb128;
+                color: white;
+            }
         }
     }
 
@@ -224,4 +371,7 @@ header {
             display: flex;
         }
     }
+}
+.visible{
+    transform: translateX(0)!important;
 }
